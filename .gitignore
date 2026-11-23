@@ -1,0 +1,7 @@
+node_modules/
+graphify-out/
+.state/
+.state-test.log
+.DS_Store
+# your own server list; start from config/mcporter.example.json
+config/mcporter.json

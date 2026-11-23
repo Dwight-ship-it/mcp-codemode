@@ -1,0 +1,26 @@
+{
+  "name": "mcp-codemode",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local Code Mode gateway: all MCP servers behind one typed TypeScript API, scripts run in a Deno sandbox, writes ask first.",
+  "scripts": {
+    "start": "node src/gateway.ts",
+    "stdio": "node src/gateway.ts --stdio",
+    "test": "node --test test/*.test.ts",
+    "auth": "mcporter --config config/mcporter.json auth"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "mcporter": "0.17.1",
+    "zod": "^4"
+  },
+  "devDependencies": {
+    "@types/node": "*",
+    "typescript": "^5"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=24"
+  }
+}

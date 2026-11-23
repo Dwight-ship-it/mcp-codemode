@@ -1,0 +1,51 @@
+{
+  "imports": [],
+  "mcpServers": {
+    "photocraft": {
+      "description": "PhotoCraft image editor, headless",
+      "command": "photocraft-cli",
+      "args": [
+        "mcp",
+        "--automation-read-root",
+        "/path/to/workspace",
+        "--automation-write-root",
+        "/path/to/workspace"
+      ],
+      "lifecycle": "keep-alive"
+    },
+    "pdfcraft": {
+      "description": "PdfCraft PDF editor",
+      "command": "pdfcraft-cli",
+      "args": [
+        "mcp",
+        "--root",
+        "/path/to/workspace"
+      ],
+      "lifecycle": "keep-alive"
+    },
+    "earshot": {
+      "description": "earshot: listen to and measure audio",
+      "command": "/path/to/earshot/.venv/bin/python",
+      "args": [
+        "-m",
+        "earshot",
+        "mcp"
+      ],
+      "lifecycle": "keep-alive"
+    },
+    "rea": {
+      "description": "REA reverse engineering",
+      "command": "rea",
+      "args": [
+        "mcp"
+      ],
+      "lifecycle": "keep-alive"
+    },
+    "vercel": {
+      "description": "Vercel platform: projects, deployments, logs, domains",
+      "url": "https://mcp.vercel.com",
+      "auth": "oauth",
+      "clientName": "mcp-codemode"
+    }
+  }
+}

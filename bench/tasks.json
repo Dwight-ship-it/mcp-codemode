@@ -1,0 +1,22 @@
+{
+  "P1": {
+    "needs": "photocraft",
+    "prompt": "In PhotoCraft (headless), create a new 1200x800 RGB document with a white background. Add a new pixel layer and fill it with a gradient, apply a Gaussian blur of about 8 px to it, add a Levels or Curves adjustment layer, and add a text layer that says 'Code Mode'. Then render a preview, look at it, and tell me the final layer list (top to bottom) and how many history steps the document has."
+  },
+  "P2": {
+    "needs": "photocraft",
+    "prompt": "In PhotoCraft, find every command whose id contains 'blur' or 'sharpen'. Give me a table of each command id with its parameter names (just the names, not types or defaults)."
+  },
+  "V1": {
+    "needs": "vercel",
+    "prompt": "Using the Vercel tools: list my Vercel projects. For the 5 most recently updated ones, give the latest production deployment's state and creation date, and the number of runtime errors in the last 24 hours. Answer as a table."
+  },
+  "V2": {
+    "needs": "vercel",
+    "prompt": "Using the Vercel tools: which of my Vercel projects have custom domains (not *.vercel.app)? For each such domain, say whether it is verified and correctly configured. Answer as a table."
+  },
+  "P3": {
+    "needs": "photocraft",
+    "prompt": "In PhotoCraft, test every command in the Filter > Blur and Filter > Sharpen menus (ids starting with filter.blur. or filter.sharpen.). For each one: on a 600x400 document with a pixel layer filled with a gradient, run the command with its default parameters, record whether it succeeded or the error message, then undo so the next test starts clean. Give me a table: command id, ok or error (with the error text)."
+  }
+}
